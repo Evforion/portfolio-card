@@ -1,44 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Артем Журавлев — Архитектор / Дизайнер интерьеров</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#56554f">
+  <meta name="description" content="Артем Журавлев — архитектор и дизайнер интерьеров, Москва. Работы, международные премии и контакты.">
+  <title>Артем Журавлев — архитектор и дизайнер интерьеров</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2356554f'/%3E%3Cpath d='m7 25 9-19 9 19M11 18h10' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="card">
-        <!-- Шапка -->
-        <div class="header-bg">
-            <div class="avatar-container">
-                <!-- Укажите название файла вашей аватарки -->
-                <img src="avatar.jpg" alt="Артем Журавлев" class="avatar">
-            </div>
-        </div>
-
-        <!-- Контент -->
-        <div class="content">
-            <h1 class="name">АРТЕМ ЖУРАВЛЕВ</h1>
-            <p class="subtitle">АРХИТЕКТОР / ДИЗАЙНЕР ИНТЕРЬЕРОВ<br>Г. МОСКВА</p>
-
-            <!-- Кнопки   -->
-            <div class="buttons">
-                <!-- Замените '#' на реальную ссылку на портфолио -->
-                <a href="#" target="_blank" class="btn">МОИ РАБОТЫ</a>
-                
-                <!-- Переход на вторую страницу -->
-                <a href="awards.html" class="btn">МЕЖДУНАРОДНЫЕ ПРЕМИИ</a>
-                
-                <!-- Замените '#' на нужную ссылку -->
-                <a href="#" target="_blank" class="btn">АРХИТЕКТОР В УТИЛЕ</a>
-                
-                <!-- Замените '#' на ссылку на Telegram (например, https://t.me/yourusername) -->
-                <a href="#" target="_blank" class="btn">TELEGRAM</a>
-                
-                <!-- Замените email@example.com на вашу почту -->
-                <a href="mailto:email@example.com" class="btn">НАПИСАТЬ НА ПОЧТУ</a>
-            </div>
-        </div>
-    </div>
+  <div class="page">
+    <header class="cover" aria-label="Портрет архитектора">
+      <div class="cover__crop" aria-hidden="true"><img class="cover__image" src="assets/header-bg.webp" alt="" width="860" height="391"></div>
+      <div class="portrait"><img class="portrait__image" src="assets/avatar.webp" alt="Артем Журавлев" width="384" height="384"></div>
+    </header>
+    <main class="profile">
+      <h1 class="profile__name">Артем Журавлев</h1>
+      <p class="profile__description">Архитектор / дизайнер интерьеров<br>г. Москва</p>
+      <nav class="links" aria-label="Работы и контакты">
+        <!-- Для подключения ссылки добавьте href="https://…" и удалите aria-disabled, role и title. -->
+        <a class="link" role="link" aria-disabled="true" title="Ссылка на портфолио пока не указана">Мои работы</a>
+        <a class="link" href="awards.html">Международные премии</a>
+        <a class="link" role="link" aria-disabled="true" title="Ссылка пока не указана">Архитектор в утиле</a>
+        <a class="link" role="link" aria-disabled="true" title="Адрес Telegram пока не указан">Telegram</a>
+        <!-- Для почты используйте href="mailto:ваш-адрес". -->
+        <a class="link" role="link" aria-disabled="true" title="Адрес электронной почты пока не указан">Написать на почту</a>
+      </nav>
+    </main>
+  </div>
 </body>
 </html>
