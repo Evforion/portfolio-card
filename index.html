@@ -24,10 +24,42 @@
         <a class="link" href="awards.html">Международные премии</a>
         <a class="link" target="_blank" href="https://t.me/architect_v_utile">Архитектор в утиле</a>
         <a class="link" target="_blank" href="https://t.me/MrSmurfi">Telegram</a>
-        <!-- Для почты используйте href="mailto:ваш-адрес". -->
-        <a class="link" href="mailto:zhuravlevarte@gmail.com">Написать на почту</a>
+        <!-- Копирование e-mail в буфер обмена при клике -->
+        <a class="link" href="#" onclick="copyEmail(event, 'zhuravlevarte@gmail.com')">Написать на почту</a>
       </nav>
     </main>
   </div>
+
+  <script>
+    function copyEmail(event, email) {
+      event.preventDefault();
+      
+      // Создаем временный элемент для надёжного копирования
+      const tempInput = document.createElement('textarea');
+      tempInput.value = email;
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      
+      try {
+        document.execCommand('copy');
+      } catch (err) {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(email);
+        }
+      }
+      document.body.removeChild(tempInput);
+
+      // Меняем текст кнопки на 2 секунды
+      const btn = event.currentTarget;
+      const originalText = btn.textContent;
+      btn.textContent = 'Адрес скопирован!';
+      
+      setTimeout(() => {
+        btn.textContent = originalText;
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
